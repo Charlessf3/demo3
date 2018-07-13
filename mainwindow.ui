@@ -14,32 +14,11 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>130</x>
-      <y>80</y>
-      <width>75</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>fuck</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_2">
-    <property name="geometry">
-     <rect>
-      <x>130</x>
-      <y>130</y>
-      <width>75</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>测试</string>
-    </property>
-   </widget>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QTextEdit" name="textEdit"/>
+    </item>
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -50,6 +29,24 @@
      <height>23</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menu_F">
+    <property name="title">
+     <string>文件(&amp;F)</string>
+    </property>
+    <addaction name="action_N"/>
+    <addaction name="action_O"/>
+    <addaction name="action_C"/>
+    <addaction name="action_S"/>
+    <addaction name="action_A"/>
+   </widget>
+   <widget class="QMenu" name="menu_E">
+    <property name="title">
+     <string>编辑（&amp;E）</string>
+    </property>
+    <addaction name="action_Z"/>
+   </widget>
+   <addaction name="menu_F"/>
+   <addaction name="menu_E"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -58,10 +55,96 @@
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
+   <addaction name="action_N"/>
+   <addaction name="separator"/>
+   <addaction name="action_O"/>
+   <addaction name="separator"/>
+   <addaction name="action_C"/>
+   <addaction name="separator"/>
+   <addaction name="action_Z"/>
+   <addaction name="separator"/>
+   <addaction name="action_A"/>
+   <addaction name="separator"/>
+   <addaction name="action_S"/>
+   <addaction name="separator"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
+  <action name="action_N">
+   <property name="icon">
+    <iconset resource="myicon.qrc">
+     <normaloff>:/myimages/Photo/12.jpg</normaloff>:/myimages/Photo/12.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>新建(&amp;N)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="action_O">
+   <property name="icon">
+    <iconset resource="myicon.qrc">
+     <normaloff>:/myimages/Photo/1.jpg</normaloff>:/myimages/Photo/1.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>打开(&amp;O)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="action_C">
+   <property name="icon">
+    <iconset resource="myicon.qrc">
+     <normaloff>:/myimages/Photo/10.jpg</normaloff>:/myimages/Photo/10.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>关闭（&amp;C）</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="action_Z">
+   <property name="icon">
+    <iconset resource="myicon.qrc">
+     <normaloff>:/myimages/Photo/30.jpg</normaloff>:/myimages/Photo/30.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>撤销（Z）</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Z</string>
+   </property>
+  </action>
+  <action name="action_S">
+   <property name="icon">
+    <iconset resource="myicon.qrc">
+     <normaloff>:/myimages/Photo/21.jpg</normaloff>:/myimages/Photo/21.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>保存（&amp;S）</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="action_A">
+   <property name="icon">
+    <iconset resource="myicon.qrc">
+     <normaloff>:/myimages/Photo/5.jpg</normaloff>:/myimages/Photo/5.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>另存为（&amp;A）</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+A</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="myicon.qrc"/>
+ </resources>
  <connections/>
 </ui>
